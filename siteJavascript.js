@@ -78,71 +78,71 @@ $(".expandList li").exists(function(){
         $('.expandListInfo').not($this.next("div")).fadeOut(0);
     });
 });
-                /*  *************************************************   **
+/*  *************************************************   **
 
-                FACULTY PAGE
+FACULTY PAGE
 
 
-                **  *************************************************   */
+**  *************************************************   */
 
-                var recordCounter = 0;
-                var firstRecord = 1;
-                var lastRecord = 100;
-                var profInfo;
+var recordCounter = 0;
+var firstRecord = 1;
+var lastRecord = 100;
+var profInfo;
 
-                $(window).ready(function(){
-                    $('#aspnetForm #results').exists(function(){
-                        $('#backLink').click(function(){
-                            $('#results, #backToSearch').fadeOut("fast");
-                            $('#backtoProfs').fadeOut("fast");
-                            $('#backLink').fadeOut("fast");
-                            $('div[id*="pnlProfs"]').fadeIn("slow");
-                            $('.hideOnResults').fadeIn("slow");
-                            firstRecord = 1;
-                            lastRecord = 100;
-                        });
+$(window).ready(function(){
+    $('#aspnetForm #results').exists(function(){
+        $('#backLink').click(function(){
+            $('#results, #backToSearch').fadeOut("fast");
+            $('#backtoProfs').fadeOut("fast");
+            $('#backLink').fadeOut("fast");
+            $('div[id*="pnlProfs"]').fadeIn("slow");
+            $('.hideOnResults').fadeIn("slow");
+            firstRecord = 1;
+            lastRecord = 100;
+        });
 
-                        $('#searchPhilFac').keyup(function(){
-                    /*
-                    how this block works:
-                    schools not beginning with search term are hidden in main list and copied to schoolDup list
-                    schools in schoolDup list not containing the search term are removed from list
-                    schools remaining in schoolDup list get applied the 'removeMe' class and get moved to main list
-                    next time search is done, previously hidden schools are shown and the 'removeMe' divs are removed
-                    */
+        $('#searchPhilFac').keyup(function(){
+            /*
+            how this block works:
+            schools not beginning with search term are hidden in main list and copied to schoolDup list
+            schools in schoolDup list not containing the search term are removed from list
+            schools remaining in schoolDup list get applied the 'removeMe' class and get moved to main list
+            next time search is done, previously hidden schools are shown and the 'removeMe' divs are removed
+            */
 
-                    $('.removeMe').remove();
-                    $('.dynaHidden').removeClass('dynaHidden');
-                    $('.dynaShow').removeClass('dynaShow');
-                    var searchTerm = $('#searchPhilFac').val();
-                    var originalTerm = searchTerm;
-                    searchTerm = searchTerm.toLowerCase();
-                    var profName;
-                    $('#aspnetForm .gridView>div').each(function(){
-                        profName = $(this).attr('data-id');
-                        profName = profName.toLowerCase();
-                        if (profName.indexOf(searchTerm) == 0)
-                            $(this).addClass('dynaShow');
-                        else
-                            $(this).addClass('dynaHidden');
-                    });
-                    $('.dynaHidden').clone().appendTo('#profDup');
-                    $('#profDup .dynaHidden').each(function(){
-                        profName = $(this).attr('data-id');
-                        profName = profName.toLowerCase();
-                        if (profName.indexOf(searchTerm) == -1)
-                            $(this).remove();
-                        else
-                        {
-                            $(this).addClass('removeMe');
-                            $('#aspnetForm .gridView').append($(this));
-                        }
-                    });
-                    $('.removeMe').removeClass('dynaHidden');
-                    registerClicks();
-                });
-registerClicks();
-});
+            $('.removeMe').remove();
+            $('.dynaHidden').removeClass('dynaHidden');
+            $('.dynaShow').removeClass('dynaShow');
+            var searchTerm = $('#searchPhilFac').val();
+            var originalTerm = searchTerm;
+            searchTerm = searchTerm.toLowerCase();
+            var profName;
+            $('#aspnetForm .gridView>div').each(function(){
+                profName = $(this).attr('data-id');
+                profName = profName.toLowerCase();
+                if (profName.indexOf(searchTerm) == 0)
+                    $(this).addClass('dynaShow');
+                else
+                    $(this).addClass('dynaHidden');
+            });
+            $('.dynaHidden').clone().appendTo('#profDup');
+            $('#profDup .dynaHidden').each(function(){
+                profName = $(this).attr('data-id');
+                profName = profName.toLowerCase();
+                if (profName.indexOf(searchTerm) == -1)
+                    $(this).remove();
+                else
+                {
+                    $(this).addClass('removeMe');
+                    $('#aspnetForm .gridView').append($(this));
+                }
+            });
+            $('.removeMe').removeClass('dynaHidden');
+            registerClicks();
+        });
+    registerClicks();
+    });
 });
 
 function registerClicks()
