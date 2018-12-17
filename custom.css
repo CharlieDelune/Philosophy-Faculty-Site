@@ -1,0 +1,250 @@
+#home-content .pdfIcon{margin-left: 3px;}
+
+/*------------------ START OF ACCORDION ------------------ */
+.accordion{
+    width: 100%;
+    clear: both;
+}
+.accordion h4 i{
+    /*margin-right: 30px;*/
+    position: relative;
+    left: -5px;
+}
+.accordion ul{
+    list-style-position: inside;
+    margin-left: 15px;
+}
+.accordion ul li{
+    margin-bottom: 10px;
+}
+.accordion h4{
+    cursor: pointer;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    padding:10px;
+    color: #522152;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 5px -1px rgba(0,0,0,.2), inset 0 3px 10px white;
+    -moz-box-shadow: 0px 0px 5px -1px rgba(0,0,0,.2), inset 0 3px 10px white;
+    box-shadow: 0px 0px 5px -1px rgba(0,0,0,.2), inset 0 3px 10px white;
+    margin: 16px 0;
+    padding-left: 30px;
+}
+.accordion h4::after{
+    background: none;
+}
+.accordion h4:hover{
+    background-color: #eee;
+}
+.accordion > div{
+    padding:0 16px 16px 16px;
+}
+.accordion p:first-child{
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+/* Home Page */
+#home-content .defaultLeft{padding-right: 10px;}
+#home-content .projectSlide{padding: 10px;}
+
+#home-content .greyGrid{background-color: #eee; padding: 10px; margin-top: 10px;}
+#home-content .greyGrid h3, #home-content .greyGrid h4{margin-top: 0;}
+#philosophyhome #factsSlides .slides{padding: 10px; font-size: .9em; text-align:center;}
+#philosophyhome #factsSlides .slides img {margin:auto; height:160px;}
+#philosophyhome #factsSlides .slides li span:before{content: "\2022"; margin-right: 5px;}
+#philosophyhome #factsSlides .slides li span{margin-left: -10px; text-indent: 10px;}
+#home-content .facts-control-nav{
+	margin-left: 0;
+	background-color: #c1c1c1;
+	text-align: center;
+	margin-bottom: 0;
+}
+.facts-control-nav li{
+    display: inline-block;
+}
+.facts-control-nav li a{
+    display: block;
+    padding: 0 3px;
+    cursor: pointer;
+    color: #ddd;
+    margin: 0 5px 0 0;
+}
+.facts-control-nav li a.facts-active{
+    color: #fff;
+}
+#home-content .flexslider .slides{ 
+    overflow: hidden;
+}
+#home-content .flexslider {
+    margin-top: 10px;
+}
+#home-content .flexslider .slides li{
+    background-color: #eee; 
+    margin: 0 5px; 
+    width: 150px; 
+    display: inline-block;
+}
+#home-content .events img{width: 100%;}
+#home-content .events span{
+    font-size: .9em;
+    display: block;
+    line-height: normal;
+    padding-top: 5px;
+    color: #575757;
+}
+
+/* Students Page */
+#highlights ul{
+    list-style-type:none;
+    padding: 1em 0 1em 0;
+}
+html.collegeTemplate #home-content .flexslider .slides {
+    max-width:1920px;
+}
+
+/* Faculty Page */
+#aspnetForm #schools table, #aspnetForm #courses table
+{
+    width: 100%;
+}
+#aspnetForm #schools th, #aspnetForm #courses th
+{
+    text-align: left;
+}
+#snpLblCntr label
+{
+    font-weight: bold;
+}
+.gridView
+{
+    height: 400px;
+    overflow: auto;
+    width: 100%;
+}
+.dynaHidden, #showMoreCourses, #home-content #backToSearch
+{
+    display: none;
+}
+.originalList div:hover
+{
+    color: #763775;
+    background-color: #ffbd07;
+}
+#backToSearch
+{
+    z-index: 9999;
+    bottom: 50px;
+    right: 5.1%;
+    position: fixed;
+    width: 51px;
+    height: 51px;
+    border-radius: 10px;
+    background-color: #666;
+    display: none;
+    color: #F7F7F7;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.dynaShow
+{
+    display: block;
+}
+div[id^=prof-]
+{
+    background-color: #763776;
+    border: 1px solid #d3d3d3;
+    color: #EEE;
+    font-weight: normal;
+    border-radius: 4px;
+    margin: 0 0.75em 0.75em 0;
+    padding: 5px;
+}
+div[id^=prof-]:hover
+{
+    cursor: pointer;
+}
+#profSearch
+{
+    margin: 10px;
+    position: relative;
+    top: -14px;
+    transition: .15s;
+    box-shadow: none;
+}
+#profSearch:hover
+{
+    box-shadow: 0 0 3px #763776;
+}
+#profSearch i
+{
+    padding-right: 5px;
+    color: #333;
+}
+#searchPhilFac
+{
+    height: 35px;
+    position: relative;
+    top: -4px;
+}
+#pnlProfs div[id^=prof-] div
+{
+    display:none;
+}
+
+#pnlProfs div[id^=prof-] span
+{
+    float: right;
+    padding-right: 20px;
+}
+
+#backtoProfs, #backLink, #results
+{
+    display: none;
+}
+#backLink i
+{
+    padding-right: 10px;
+}
+.spacing
+{
+    margin-top: 5%; 
+    margin-bottom: 2%;
+}
+div.scroll
+{
+    width: 100%;
+    height: 300px;
+    overflow: auto; 
+}
+#results h4{
+    margin-top:1em;
+    margin-bottom:.5em;
+}
+.searchBtn
+{
+    border: 1px solid #d3d3d3;
+    background: #763776 50% 50% repeat-x;
+    font-weight: normal;
+    color: #eeeeee;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (max-width:1300px){
+}
+@media only screen and (max-width:768px){	
+    /** DEFAULT PAGE **/
+    #home-content .defaultLeft{padding-right: 0;}
+}
+@media only screen and (max-width:600px){
+}
+@media only screen and (max-width:480px){
+}
